@@ -1,0 +1,23 @@
+# WordPress core (managed by host / installer, not this repo)
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+license.txt
+readme.html
+# Uploads & cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+# Dependencies
+node_modules/
+vendor/
+# Logs / OS / editor
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Env / secrets
+.env
+wp-config.php
