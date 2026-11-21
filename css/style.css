@@ -1,0 +1,44 @@
+:root{--paper:#FAF6EC;--paper2:#F1EAD8;--ink:#22271F;--muted:#47503F;--green:#173F2C;--green-dark:#0F2E1F;--line:#D8CFB8;--error:#B3261E;--focus:#173F2C}
+*{box-sizing:border-box}html{overflow-x:clip}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3,.serif{font-family:"Lora",Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.4rem)}h2{font-size:clamp(1.5rem,3.5vw,2.1rem)}
+a{color:var(--green)}:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--green);color:var(--paper);padding:10px;z-index:99}
+.demo-bar{background:var(--green-dark);color:var(--paper);text-align:center;padding:8px 12px;font-size:.9rem;font-weight:700;letter-spacing:.04em}
+header.site{border-bottom:2px solid var(--ink);background:var(--paper)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:"Lora",serif;font-weight:700;font-size:1.35rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--green)}
+nav.main{display:flex;flex-wrap:wrap;gap:6px}nav.main a{color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}
+nav.main a[aria-current]{background:var(--green);color:var(--paper);font-weight:700}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:36px 0}
+.hero img,.card img{width:100%;height:auto;display:block;border-radius:12px}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.04)}}
+.hero img{animation:drift 9s ease-in-out infinite alternate}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 22px;border-radius:10px;background:var(--green);color:var(--paper);font-weight:700;text-decoration:none;border:2px solid var(--green);cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.alt{background:transparent;color:var(--green)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:10px 0 40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card img{aspect-ratio:16/9;object-fit:cover;border-radius:0}
+.meta{color:var(--muted);font-size:.92rem}
+.price{font-weight:800;font-size:1.15rem}
+.chip{display:inline-block;background:var(--paper2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.85rem;font-weight:700}
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:end;padding:20px 0 6px}
+.field{display:flex;flex-direction:column;gap:6px;flex:1 1 180px}
+label{font-weight:700}
+input,select{font-size:16px;min-height:52px;padding:10px 12px;border:2px solid var(--muted);border-radius:10px;background:#fff;color:var(--ink);width:100%;font-family:inherit}
+.err{color:var(--error);font-weight:700;min-height:1.2em;font-size:.95rem}
+.empty{border:2px dashed var(--muted);border-radius:14px;padding:28px;text-align:center;margin:20px 0 40px}
+details.module{border:1px solid var(--line);border-radius:12px;background:#fff;margin:10px 0;padding:6px 16px}
+details.module summary{cursor:pointer;font-weight:700;padding:12px 0;min-height:44px}
+details.module li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.progress{height:14px;background:var(--paper2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--green)}
+.notice{border:2px solid var(--green);background:var(--paper2);border-radius:12px;padding:16px;margin:16px 0}
+footer.site{border-top:2px solid var(--ink);margin-top:30px;padding:24px 0 40px}
+.reveal{opacity:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:24px 0}}
+@media(prefers-reduced-motion:reduce){.hero img{animation:none}*{transition:none!important}}

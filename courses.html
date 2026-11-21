@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Course Catalogue (Demo) — Sabaq Academy</title><meta name="description" content="Demo course catalogue with live filters, search and sorting.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="icon" href="assets/favicon.svg"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar">DEMO — Sabaq Academy is a fictional academy. All courses, instructors, ratings and prices are demo data. Plugin-based MVP-style LMS front-end.</div>
+<header class="site"><div class="wrap nav"><a class="logo" href="index.html">Sabaq<span> Academy</span></a>
+<nav class="main" aria-label="Main"><a href="index.html">Home</a><a href="courses.html" aria-current="page">Courses</a><a href="learning.html">My Learning</a><a href="enrol.html">Enrol</a></nav></div></header>
+<main id="main" class="wrap">
+<h1 style="padding-top:24px">Course catalogue</h1><p class="meta">DEMO data — every course, instructor, rating and price below is fictional.</p>
+<form class="filters" data-filters>
+<div class="field"><label for="f-q">Search</label><input id="f-q" data-q type="search" placeholder="Search title or instructor"></div>
+<div class="field"><label for="f-cat">Category</label><select id="f-cat" data-cat><option value="all">All categories</option></select></div>
+<div class="field"><label for="f-level">Level</label><select id="f-level" data-level><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+<div class="field"><label for="f-sort">Sort</label><select id="f-sort" data-sort><option value="popular">Most popular</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="duration">Duration: shortest first</option></select></div>
+</form>
+<p aria-live="polite" data-count></p>
+<div class="grid" data-grid></div>
+<div class="empty" data-empty hidden><h2>No courses match</h2><p data-empty-text></p><button class="btn" type="button" data-reset>Reset all filters</button></div>
+</main><footer class="site"><div class="wrap"><p><strong>Sabaq Academy — DEMO.</strong> A fictional online academy for learners in Pakistan and worldwide. Built as a plugin-based MVP-style LMS front-end demo by MTS for BalanceBit Solutions' portfolio. No real enrolment, payment or certificate exists here.</p><p class="meta">Demo data only · Video: none — photo + CSS motion</p></div></footer>
+<script src="js/logic.js"></script><script src="js/courses.js"></script></body></html>

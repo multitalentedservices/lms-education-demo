@@ -1,0 +1,83 @@
+PASS 12 courses
+PASS >=4 categories
+PASS every course has instructor/level/price/rating
+PASS every course >=2 modules
+PASS totals() matches manual sum course1
+PASS course1 exact: 9 lessons 203 mins
+PASS formatMins 203 = 3h 23m
+PASS formatPKR 18000
+PASS filter all =12
+PASS filter Web Dev =4
+PASS filter Beginner =7
+PASS filter Design+Beginner =1
+PASS search figma =1
+PASS search instructor zara =1
+PASS empty combo =0
+PASS sort price-asc first is Urdu 9000
+PASS sort price-desc first 42000
+PASS sort popular first learners max
+PASS sort does not mutate source
+PASS discount 42000 -> 6300
+PASS discount 18000 -> 0
+PASS discount boundary 25000 -> 3750
+PASS discount 24999 -> 0
+PASS summary react total 35700
+PASS summary excel total 10000
+PASS valid phone 0321
+PASS valid phone +92
+PASS invalid phone 123
+PASS invalid phone landline
+PASS invalid phone too long
+PASS valid email
+PASS invalid email
+PASS validate names constraint
+PASS validate phone names PK format
+PASS validate all good = {}
+PASS ref format
+PASS ref deterministic
+PASS ref differs by course
+PASS seats base react = 8
+PASS seats decrement with enrolment
+PASS seats cancelled does not count
+PASS seats other course ignored
+PASS persistence round-trip
+PASS wa link contains course title encoded
+PASS wa link is wa.me
+PASS contrast ink on paper = 14.12
+PASS contrast muted on paper = 7.82
+PASS contrast green on paper = 10.91
+PASS contrast paper on green = 10.91
+PASS contrast paper on green-dark = 13.60
+PASS contrast error on paper = 6.06
+PASS contrast ink on white = 15.24
+PASS contrast muted on white = 8.44
+PASS contrast focus green on paper (>=3) = 10.91
+PASS index.html has DEMO label
+PASS index.html no lorem
+PASS index.html has title
+PASS courses.html has DEMO label
+PASS courses.html no lorem
+PASS courses.html has title
+PASS course.html has DEMO label
+PASS course.html no lorem
+PASS course.html has title
+PASS enrol.html has DEMO label
+PASS enrol.html no lorem
+PASS enrol.html has title
+PASS learning.html has DEMO label
+PASS learning.html no lorem
+PASS learning.html has title
+PASS unique titles
+PASS all local links/assets resolve
+PASS honest payment placeholder text in enrol.html
+PASS plugin-based MVP label present
+PASS sitemap + robots exist
+PASS code < 400KB (37657B)
+PASS image <=120KB cat-business.jpg (64749B)
+PASS image <=120KB cat-data.jpg (65735B)
+PASS image <=120KB cat-design.jpg (72572B)
+PASS image <=120KB cat-language.jpg (71984B)
+PASS image <=120KB cat-web.jpg (56328B)
+PASS image <=120KB hero.jpg (73907B)
+PASS media <=1.6MB (405275B)
+TOTAL: 82 PASS / 0 FAIL
