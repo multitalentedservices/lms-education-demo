@@ -57,3 +57,54 @@ external evidence items (served-preview CWV, AICOS-112 §0 sign-off); a header a
 repair does not manufacture them.
 Push of the changed text files (css/style.css, Scorecard-Verdict.md, tests-output.log) is
 pending the GitHub connector's approval card — see FIX-REPORT-ROUND2.md.
+
+---
+
+## Addendum — PREMIUM UPGRADE PASS (2026-11-22, ladder site #8)
+
+MasterClass treatment per Premium Plan §5 #8. Premium layer in NEW files
+(`css/premium.css`, `js/premium.js`) + `assets/vendor/` (Swiper only); `css/style.css`
+base layer — including the audit-fixed `a`/`ul` rules — is byte-untouched. Card markup
+changes are confined to the render templates in js/home.js + js/courses.js (data,
+prices and logic untouched).
+
+- **Poster cards:** every course tile (featured, catalogue grid, rails, quiz result)
+  re-cut to a 4:5 poster (computed aspect-ratio verified `4 / 5`), category photo as
+  the cover, instructor as the cover credit ("with …"), and ★ rating + learner count
+  on every card — both fields already carried by the site's own catalogue data and
+  labelled "(demo)". No numbers invented.
+- **Swiper category rails (new technique):** 5 rails on index (one per category),
+  all 12 courses, prev/next + keyboard + a11y enabled. Without JS the same markup
+  degrades to a complete wrap grid (`.cat-rail:not(.swiper-on)` rule) plus noscript
+  pointers to the catalogue.
+- **Display-serif chapter headlines:** Lora at clamp(2.7rem,6.4vw,4.4rem) in the hero;
+  numbered chapter eyebrows (01 Featured · 02 Catalogue · 03 Start here).
+- **Onboarding quiz (demo logic):** 3 questions (category → level → priority) routed
+  through the catalogue's own `filterCourses`/`sortCourses`; verified end-to-end —
+  Web Development + Beginner + Most popular recommends "WordPress for Client Sites"
+  (2,105 learners, the data's actual top match), with an honest closest-match note
+  when a category+level pair is empty.
+- **Filter/URL-state system:** untouched and re-proven under the poster re-cut —
+  Data filter → 2 cards, count line "Showing 2 of 12", URL carries `category=Data`.
+- **Vendor copies:** swiper-bundle.min.js + .css 14.4.0 (index only, defer) —
+  sha256 matches the Install Record. GSAP/Lenis deliberately NOT stacked on the
+  Swiper page (see deviations).
+- **P8 weights (total gzip JS per page, measured):** index 51,456 B (~50 KB ≤ 90
+  slider class) · courses 5,959 B · course 6,133 B · enrol 6,020 B · learning
+  5,822 B (plain ≤ 20 KB ✓).
+- **Batteries:** tests.js UNAMENDED 82/82 PASS before and after. Separate
+  `premium-checks.js`: 23/23 PASS — every page 390+1440 (0 overflow/broken), rails/
+  poster/quiz/filter assertions, no-JS completeness, zero console/page errors
+  (sandbox font-fetch tunnel failures excluded — they occur on untouched pages too).
+- **Premium Gate P1–P10:** P1 ✓ · P2 ✗ DEVIATION (no Lenis — §5's LMS treatment
+  does not include it, and GSAP+Lenis+Swiper would total ~103 KB gzip, breaking
+  P8; the lighter truthful subset was chosen) · P3 ◐ (signature moment = poster
+  rails + quiz routing, not a GSAP pinned scene — same budget reason, recorded) ·
+  P4 ✓ · P5 ✓ (poster-led catalogue; rails are category rails, not a generic hero
+  slider) · P6 ✓ quiz depth · P7 ✓ View Transitions + states · P8 ✓ · P9 ✓ ·
+  P10 ✓.
+
+**Re-score: 90 → 91/100** (+1 Area 4: Swiper rails + quiz interaction layer).
+**Verdict remains REJECT — evidence bar only:** the same two external items are
+still outstanding (served-preview CWV, Area 7 · AICOS-112 §0 sign-off, Area 1).
+No GitHub push (per upgrade-run instruction).

@@ -1,0 +1,19 @@
+catalogue count initial -> Showing 12 of 12 courses
+empty state text -> No course matches category = Data, level = Advanced. Try widening a filter or reset everything.
+empty state URL -> file:///home/hatch/workspace/portfolio-builds/lms-education-demo/courses.html?category=Data&level=Advanced
+after reset count -> Showing 12 of 12 courses | URL -> file:///home/hatch/workspace/portfolio-builds/lms-education-demo/courses.html
+seats BEFORE enrol -> 8 of 30 demo seats left
+FIRING whatsapp log -> [{"courseId":"react-next","at":"demo-click","channel":"whatsapp"}]
+enrol summary -> Price: PKR 42,000 · Discount: −PKR 6,300 · Total due (demo, no payment taken): PKR 35,700
+email error CONTENT -> Enter a valid email address, e.g. name@example.com.
+phone error CONTENT -> Enter a Pakistani mobile in the format 03XX XXXXXXX (11 digits starting 03).
+email error after fix (must be empty) -> ""
+phone error after fix (must be empty) -> ""
+confirmation CONTENT -> Enrolment confirmed — DEMOReference: LM-DEMO-1372Course: React & Next.js in PracticeLearner: Fatima Khan (fatima@example.com)Course price: PKR 42,000Discount: −PKR 6,300Total: PKR 35,700 (demo — no payment was taken)Go to My Learning Back to course
+confirmation ref -> LM-DEMO-1372
+seats AFTER enrol -> 7 of 30 demo seats left
+progress after 2 clicks -> 20% complete
+progress AFTER RELOAD (persisted) -> 20% complete
+learning after cancel -> No enrolments yetYou have not enrolled in any demo course yet.Browse courses
+seats AFTER cancel (restored) -> 8 of 30 demo seats left
+FIRING enrolments stored = [{"ref":"LM-DEMO-1372","courseId":"react-next","name":"Fatima Khan","email":"fatima@example.com","phone":"0321 1234567","total":35700,"discount":6300,"price":42000,"progress":20,"status":"cancelled"}]

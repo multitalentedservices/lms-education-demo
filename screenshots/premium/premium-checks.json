@@ -1,0 +1,97 @@
+{
+  "results": [
+    {
+      "name": "index phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "index desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "courses phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "courses desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "course phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "course desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "enrol phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "enrol desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "learning phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "learning desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "5 category rails built (5)",
+      "pass": true
+    },
+    {
+      "name": "rails carry all 12 courses as poster cards (12)",
+      "pass": true
+    },
+    {
+      "name": "all rails Swiper-enhanced",
+      "pass": true
+    },
+    {
+      "name": "poster cards are 4:5 (4 / 5)",
+      "pass": true
+    },
+    {
+      "name": "poster card shows rating + learner count",
+      "pass": true
+    },
+    {
+      "name": "quiz routes to a recommended course",
+      "pass": true
+    },
+    {
+      "name": "catalogue renders 12 poster cards",
+      "pass": true
+    },
+    {
+      "name": "filter Data -> 2 poster cards",
+      "pass": true
+    },
+    {
+      "name": "URL state carries category",
+      "pass": true
+    },
+    {
+      "name": "count line updates",
+      "pass": true
+    },
+    {
+      "name": "no-JS index complete (hero + fallbacks)",
+      "pass": true
+    },
+    {
+      "name": "no-JS courses keeps filter form",
+      "pass": true
+    },
+    {
+      "name": "zero console/page errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

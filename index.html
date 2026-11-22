@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sabaq Academy (Demo) — Online Courses for Pakistan & Global Learners</title><meta name="description" content="Demo LMS: fictional academy with course catalogue, enrolment and My Learning.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"><link rel="icon" href="assets/favicon.svg"></head><body>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css"><link rel="stylesheet" href="css/premium.css"><link rel="icon" href="assets/favicon.svg"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="demo-bar">DEMO — Sabaq Academy is a fictional academy. All courses, instructors, ratings and prices are demo data. Plugin-based MVP-style LMS front-end.</div>
 <header class="site"><div class="wrap nav"><a class="logo" href="index.html">Sabaq<span> Academy</span></a>
@@ -12,7 +12,9 @@
 <p><a class="btn" href="courses.html">Browse courses</a> <a class="btn alt" href="learning.html">My Learning</a></p>
 <p class="meta">12 fictional courses · 5 categories · PKR prices · No real payment is taken</p></div>
 <div><img src="assets/hero.jpg" alt="Students learning together at a library table with laptops" width="900" height="675"></div></section>
-<section><h2>Featured courses</h2><div class="grid" data-featured></div></section>
+<section><p class="chapter">Chapter 01 · Featured</p><h2 class="chapter-h">Featured courses</h2><div class="grid" data-featured></div></section>
+<section><p class="chapter">Chapter 02 · Catalogue</p><h2 class="chapter-h">Every course, cut as a poster</h2><p class="meta">Browse by category — ratings and learner counts are the catalogue's own demo data, on every card.</p><div data-rails></div><noscript><p class="meta">JavaScript is off, so the category rails cannot be built here — all 12 courses are in the <a href="courses.html">catalogue</a>.</p></noscript></section>
+<section><p class="chapter">Chapter 03 · Start here</p><h2 class="chapter-h">Not sure where to start?</h2><div class="quiz" data-quiz><div data-q="1"><p class="q-step">Question 1 of 3 · Demo quiz</p><h3>What do you want to learn?</h3><div class="quiz-opts" data-opts="category"></div></div><div data-q="2" hidden><p class="q-step">Question 2 of 3 · Demo quiz</p><h3>Your level?</h3><div class="quiz-opts" data-opts="level"></div></div><div data-q="3" hidden><p class="q-step">Question 3 of 3 · Demo quiz</p><h3>What matters most?</h3><div class="quiz-opts" data-opts="sort"></div></div><div data-q="result" hidden><p class="q-step">Your recommended course · Demo</p><div data-quiz-result></div><p><button class="btn alt" type="button" data-quiz-restart>Start again</button> <a class="btn alt" href="courses.html">Browse the full catalogue</a></p></div><noscript><p class="meta">JavaScript is off, so the quiz cannot run — the <a href="courses.html">catalogue</a> has filters for category, level and price.</p></noscript></div></section>
 <section class="notice"><h2>How this demo works</h2><p>This is a plugin-based MVP-style LMS front-end: catalogue, curriculum, enrolment and learner progress run in your browser (localStorage). In production, the same front-end connects to a Pakistani payment gateway (JazzCash / EasyPaisa / card via a PK processor). This demo takes no payment and stores nothing on a server.</p></section>
 </main><footer class="site"><div class="wrap"><p><strong>Sabaq Academy — DEMO.</strong> A fictional online academy for learners in Pakistan and worldwide. Built as a plugin-based MVP-style LMS front-end demo by MTS for BalanceBit Solutions' portfolio. No real enrolment, payment or certificate exists here.</p><p class="meta">Demo data only · Video: none — photo + CSS motion</p></div></footer>
-<script src="js/logic.js"></script><script src="js/home.js"></script></body></html>
+<script src="js/logic.js"></script><script src="js/home.js"></script><script defer src="assets/vendor/swiper-bundle.min.js"></script><script defer src="js/premium.js"></script></body></html>

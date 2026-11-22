@@ -1,0 +1,39 @@
+/* Sabaq Academy — Premium layer (index + courses only). Loads AFTER css/style.css; base rules untouched. */
+/* P7: cross-document view transitions where supported, graceful without */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.4s}
+
+/* P4: display-serif chapter headlines (MasterClass treatment) */
+.hero h1{font-size:clamp(2.7rem,6.4vw,4.4rem);line-height:1.04;letter-spacing:-.015em}
+.chapter{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:var(--green);margin:34px 0 4px}
+.chapter-h{font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.08;margin:0 0 6px}
+
+/* 4:5 poster cards — instructor as the cover credit, course photo as the poster */
+.card.poster img{aspect-ratio:4/5}
+.card.poster .body{gap:6px}
+.card.poster .instructor{font-family:"Lora",Georgia,serif;font-size:1.02rem;color:var(--ink)}
+.card.poster .instructor b{color:var(--green)}
+
+/* Category rails (Swiper when JS runs; complete wrap grid without JS) */
+.cat-rail{margin:10px 0 8px;overflow:hidden}
+.cat-rail:not(.swiper-on) .swiper-wrapper{display:flex;flex-wrap:wrap;gap:16px}
+.cat-rail:not(.swiper-on) .swiper-slide{width:calc(33.333% - 11px)}
+.cat-rail.swiper-on{padding:4px 2px 10px}
+.rail-nav{display:flex;gap:8px;align-items:center}
+.rail-btn{min-width:44px;min-height:44px;border-radius:50%;border:2px solid var(--green);background:transparent;color:var(--green);font-size:1.1rem;cursor:pointer;line-height:1}
+.rail-btn:disabled{opacity:.4;cursor:not-allowed}
+.rail-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+
+/* Onboarding quiz (demo logic) */
+.quiz{border:2px solid var(--green);background:#fff;border-radius:14px;padding:22px;margin:14px 0 40px}
+.quiz .q-step{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:var(--green)}
+.quiz h3{font-size:1.45rem}
+.quiz-opts{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 4px}
+.quiz-opt{min-height:52px;padding:12px 18px;border:2px solid var(--muted);border-radius:999px;background:#fff;color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+.quiz-opt:hover{border-color:var(--green)}
+.quiz-opt[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--paper)}
+.quiz .card{max-width:340px}
+.quiz [hidden]{display:none!important}
+
+@media(max-width:640px){.cat-rail:not(.swiper-on) .swiper-slide{width:calc(50% - 8px)}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
