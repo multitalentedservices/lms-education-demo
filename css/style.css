@@ -7,7 +7,7 @@ a{color:var(--green)}:focus-visible{outline:3px solid var(--focus);outline-offse
 .demo-bar{background:var(--green-dark);color:var(--paper);text-align:center;padding:8px 12px;font-size:.9rem;font-weight:700;letter-spacing:.04em}
 header.site{border-bottom:2px solid var(--ink);background:var(--paper)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 0}
+.nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding-block:14px}
 .logo{font-family:"Lora",serif;font-weight:700;font-size:1.35rem;color:var(--ink);text-decoration:none}
 .logo span{color:var(--green)}
 nav.main{display:flex;flex-wrap:wrap;gap:6px}nav.main a{color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}
@@ -40,5 +40,6 @@ details.module li{display:flex;justify-content:space-between;gap:12px;padding:8p
 .notice{border:2px solid var(--green);background:var(--paper2);border-radius:12px;padding:16px;margin:16px 0}
 footer.site{border-top:2px solid var(--ink);margin-top:30px;padding:24px 0 40px}
 .reveal{opacity:1}
+@media(max-width:560px){nav.main{gap:4px}nav.main a{padding:10px 8px}}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:24px 0}}
 @media(prefers-reduced-motion:reduce){.hero img{animation:none}*{transition:none!important}}

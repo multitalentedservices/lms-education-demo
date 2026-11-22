@@ -72,7 +72,7 @@ PASS all local links/assets resolve
 PASS honest payment placeholder text in enrol.html
 PASS plugin-based MVP label present
 PASS sitemap + robots exist
-PASS code < 400KB (37657B)
+PASS code < 400KB (37732B)
 PASS image <=120KB cat-business.jpg (64749B)
 PASS image <=120KB cat-data.jpg (65735B)
 PASS image <=120KB cat-design.jpg (72572B)

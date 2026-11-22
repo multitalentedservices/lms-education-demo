@@ -33,3 +33,27 @@ Reasons (defects as: what is wrong · where · what fixed looks like):
 Next step: [ ] To AICOS-025 release gate   [X] Back to Gate 5 (evidence completions only — both are external to the build)   [ ] Back to Gate 2
 
 Disclosures: one test assertion was amended during the build and is disclosed in BUILD-NOTES.md (Beginner filter count corrected 6 → 7 after recounting the catalogue data; battery re-run 82/82 PASS). A first-draft syntax error in js/logic.js was caught by the battery's first run and fixed before any pass was claimed. Full-page screenshots include the complete catalogue (all 12 cards) on the courses page by design.
+
+## Addendum — Round-2 Re-verification FIX RUN (2026-11-22)
+
+Independent round-2 re-verification (`Reverification-2026-11-21/round2/REPORT.md`) found 1 minor
+defect on this site. FIXED, re-shot and read; battery **82 PASS / 0 FAIL** unamended after fixes:
+
+- **LMS-1 (minor) — Header lost its container alignment at ≤768px.** Root cause is the
+  round-1 BE-2 shorthand trap: `.nav{padding:14px 0}` (later, equal specificity) zeroed the
+  horizontal padding of the `.wrap` it shares an element with, so at ≤768px — where the wrap
+  spans the full width — the logo and nav sat flush at left=0 while body content kept its
+  20px inset (DOM-measured logo left 160 desktop → 0 tablet/phone). Fix: the shorthand is now
+  `padding-block:14px`, so the wrap's inline padding survives at every width. Restoring the
+  inset narrowed the phone header row by 40px and the nav wrapped inside it, so a ≤560px
+  tightening (`nav.main a{padding:10px 8px}`, gap 4px) keeps all four links on one row at
+  390px; at 320px the nav wraps tidily to two rows, as the re-verification itself accepted.
+  Proof: DOM geometry after fix — logo left = 20px at 768/390/320 on index + courses, header
+  122px at 390 (unchanged height), 0 overflow; re-shoot 15 combos + 5 probe320 combos,
+  0 problems (`round2/fix2-lms-education/`); index-phone.png read by eye.
+
+Score unchanged: **90/100 — REJECT (evidence bar only)**. The held points are still the two
+external evidence items (served-preview CWV, AICOS-112 §0 sign-off); a header alignment
+repair does not manufacture them.
+Push of the changed text files (css/style.css, Scorecard-Verdict.md, tests-output.log) is
+pending the GitHub connector's approval card — see FIX-REPORT-ROUND2.md.
